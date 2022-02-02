@@ -1,0 +1,36 @@
+span{
+    size: 30px;
+    color: red;
+}
+.services-area .single-services .services-cap p {
+    color: black;}
+   
+.slider-height {
+    min-height: 281px;
+}
+.hero__caption{
+   color: blanchedalmond;
+  font-size: 50px;
+    margin-top: 150px;
+}
+#select1{
+    margin-left: 5px;
+    height: 61px !important;
+    width: 95%;
+}
+.pt-150 {
+    padding-top: 100px;
+}
+.visit-cap{
+    margin-top: 10px;
+}
+.pb-150 {
+    padding-bottom: 60px !important;
+}
+.section-padding30 {
+    padding-top: 50px;
+}
+.footer-padding {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}

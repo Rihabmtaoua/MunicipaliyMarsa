@@ -1,0 +1,317 @@
+<html>
+  <head>
+    <title>Bank Customer Feedback Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  
+  <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1, h4 {
+      margin: 15px 0 4px;
+      font-weight: 400;
+      }
+      h4 {
+      margin: 20px 0 4px;
+      font-weight: 400;
+      }
+      span {
+      color: red;
+      }
+      .small {
+      font-size: 10px;
+      line-height: 18px;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      vertical-align: middle;
+      }
+      input:hover, textarea:hover, select:hover {
+      outline: none;
+      border: 1px solid #095484;
+      background: #e6eef7;
+      }
+      .title-block select, .title-block input {
+      margin-bottom: 10px;
+      }
+      select {
+      padding: 7px 0;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background: transparent;
+      }
+      select, table {
+      width: 100%;
+      }
+      option {
+      background: #fff;
+      }
+      .day-visited, .time-visited {
+      position: relative;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      input[type="time"]::-webkit-inner-spin-button {
+      margin: 2px 22px 0 0;
+      }
+      .day-visited i, .time-visited i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 8px;
+      font-size: 20px;
+      }
+      .day-visited i, .time-visited i {
+      right: 5px;
+      z-index: 1;
+      color: #a9a9a9;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 0;
+      z-index: 2;
+      opacity: 0;
+      }
+      .question-answer label {
+      display: block;
+      padding: 0 20px 10px 0;
+      }
+      .question-answer input {
+      width: auto;
+      margin-top: -2px;
+      }
+      th, td {
+      width: 18%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 25%;
+      text-align: left;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .title-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .title-block select {
+      width: 30%;
+      margin-bottom: 0;
+      }
+      .title-block input {
+      width: 31%;
+      margin-bottom: 0;
+      }
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    
+  <header>
+    <!-- Header Start -->
+   <div class="header-area header-transparent">
+        <div class="main-header">
+           <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-1 col-lg-1 col-md-1">
+                            <div class="logo">
+                              <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-8">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">                                                                                                                                     
+                                        <li><a routerLink="">Accueil</a></li>
+                                            <li><a routerLink="etat">Etat civil</a></li>
+                                            <li><a routerLink="urbanisation">Urbanisation</a></li>
+                                            <li><a href="#">Routes et Trottoirs</a> </li>
+                                            <li><a href="contact.html">Projets</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li class="add-list"><a routerLink="reclamation"><i class="ti-plus"></i> Ajouter réclamation</a></li>
+                                            <li class="login"><a href="#">
+                                                <i class="ti-user"></i> Connexion ou Inscription </a>
+                                            </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+   </div>
+    <!-- Header End -->
+</header>
+
+  <main>
+
+    <!-- Hero Start-->
+    <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center pt-50">
+                        <h2>Acte de naissance</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testbox">
+      <form action="/">
+        <h1>Demande de copie de naissance</h1>
+        
+        <h4>Name<span>*</span></h4>
+        <div class="title-block">
+          <select>
+            <option value="title" selected>Title</option>
+            <option value="ms">Ms</option>
+            <option value="miss">Miss</option>
+            <option value="mrs">Mrs</option>
+            <option value="mr">Mr</option>
+          </select>
+          <input class="name" type="text" name="name" placeholder=" Prenom" />
+          <input class="name" type="text" name="name" placeholder="Nom" />
+        </div>
+        <h4>Lieu de naissance <span>*</span></h4>
+        <input type="text" name="name" />
+        <h4>Adresse email<span>*</span></h4>
+        <input type="text" name="name"/>
+        <div class="btn-block">
+          <button type="submit" href="/">Envoyer</button>
+        </div>
+      </form>
+    </div>
+    </main>
+    <br><br><br><br><br>
+    <footer>
+      <!-- Footer Start-->
+      <div class="footer-area">
+          <div class="container">
+             <div class="footer-top footer-padding">
+                  <div class="row justify-content-between">
+                      <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                          <div class="single-footer-caption mb-50">
+                              <div class="single-footer-caption mb-30">
+                                  <!-- logo -->
+                                  <div class="footer-logo">
+                                      <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Lien Rapide</h4>
+                                  <ul>
+                                      <li><a href="#">Acceuil</a></li>
+                                      <li><a href="#">Reclamation</a></li>
+                                      <li><a href="#">Contact</a></li>
+                                      <li><a href="#">Connecter/Inscrire</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Nos services</h4>
+                                  <ul>
+                                      <li><a href="#">Etat civil</a></li>
+                                      <li><a href="#">Urbanisation</a></li>
+                                      <li><a href="#">Routes & trottoirs</a></li>
+                                      <li><a href="#">Projets</a></li>     
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Download App</h4>
+                                  <ul>
+                                      <li class="app-log"><a href="#"><img src="assets/img/gallery/app-logo.png" alt=""></a></li>
+                                      <li><a href="#"><img src="assets/img/gallery/app-logo2.png" alt=""></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+             </div>
+            
+          </div>
+      </div>
+      <!-- Footer End-->
+  </footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+      <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+  </div>
+      
+  </body>
+</html>
